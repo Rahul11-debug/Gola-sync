@@ -37,10 +37,10 @@ function AppRoutes() {
   return (
     <Routes>
       {/* Public */}
-      <Route path="/api/auth/login" element={<Login />} />
+      <Route path="auth/login" element={<Login />} />
 
       {/* Default redirect */}
-      <Route path="/" element={<Navigate to="/login" replace />} />
+      <Route path="/" element={<Navigate to="/auth/login" replace />} />
 
       {/* ── Employee routes ── */}
       <Route path="/employee/dashboard" element={
@@ -119,7 +119,7 @@ function AppRoutes() {
       } />
 
       {/* Catch-all */}
-      <Route path="*" element={<Navigate to="/login" replace />} />
+      <Route path="*" element={<Navigate to="/auth/login" replace />} />
     </Routes>
   )
 }
