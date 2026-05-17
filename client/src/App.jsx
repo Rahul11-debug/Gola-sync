@@ -37,7 +37,7 @@ function AppRoutes() {
   return (
     <Routes>
       {/* Public */}
-      <Route path="auth/login" element={<Login />} />
+      <Route path="/auth/login" element={<Login />} />
 
       {/* Default redirect */}
       <Route path="/" element={<Navigate to="/auth/login" replace />} />
