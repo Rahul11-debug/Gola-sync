@@ -12,7 +12,7 @@ const groq = new Groq({
  */
 async function callGemini(systemPrompt, userMessage, max_tokens = 500) {
   const completion = await groq.chat.completions.create({
-    model: "llama-3.3-70b-versatile",
+    model: "openai/gpt-oss-120b",
     messages: [
       {
         role: "system",
@@ -50,7 +50,7 @@ async function callGeminiChat(systemPrompt, history, newMessage, max_tokens = 40
   ];
 
   const completion = await groq.chat.completions.create({
-    model: "llama-3.3-70b-versatile",
+    model: "openai/gpt-oss-120b",
     messages,
     temperature: 0.7,
     max_tokens
