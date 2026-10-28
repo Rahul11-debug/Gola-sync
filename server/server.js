@@ -10,7 +10,10 @@ const app = express();
 
 
 app.use(cors({
-  origin: "http://localhost:5173",
+ origin: [
+    "http://localhost:5173",
+    "https://goal-sync-ashen.vercel.app"
+  ],
   credentials: true
 }));
 app.use(express.json());
